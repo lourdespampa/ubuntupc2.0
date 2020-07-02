@@ -1,6 +1,6 @@
 FROM node:latest
 
-WORKDIR /api-rest-express
+WORKDIR /ubuntupc2.0
 
 COPY package*.json ./
 
