@@ -1,0 +1,12 @@
+extends layout
+block content
+    .login-container
+        h1 Login con facebook
+        form
+            label(for="inputemail") Email:
+            input.form-control(type='text', name='email')
+            label(for="inputemail") Contraseña:
+            input.form-control(type='text', name='contraseña')
+        a(href='/auth/facebook').login
+            img.fb(src="./images/facebook.svg", alt="Facebook")
+            h3.textfb Iniciar sesión con Facebook
