@@ -6,6 +6,12 @@ let userSchema = new Schema({
 		provider:String,
 		provider_id:String,
 		photo:String,
+		tokens:[],
+		profile:{
+			name:String,
+			gender:String,
+			picture:String
+		},
 		createAt:{type:Date, default:Date.now}
 },{
 		collection:"users"

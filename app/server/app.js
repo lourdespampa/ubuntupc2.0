@@ -5,6 +5,7 @@ const passport = require('passport')
 const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
+const {isAuthenticated} = require('./config/authenticated')
 require('./config/passport')(passport)
 
 const fileUpload = require('express-fileupload')
@@ -72,8 +73,13 @@ app.delete('/delete/:id', api.deleteUser);
 // Facebook
 app.get('/auth/facebook', passport.authenticate('facebook'));
 app.get('/auth/facebook/callback', passport.authenticate('facebook',
-  { successRedirect: '/home', failureRedirect: '/login' }
+  { successRedirect: '/home', failureRedirect: '/' }
 ));
+app.get('/auth/google', passport.authenticate('google', { scope: ['profile', 'email', 'https://www.googleapis.com/auth/drive', 'https://www.googleapis.com/auth/spreadsheets.readonly'], accessType: 'offline', prompt: 'consent' }));
+app.get('/auth/google/callback', passport.authenticate('google', { failureRedirect: '/' }), (req, res) => {
+  res.redirect(req.session.returnTo || '/home');
+});
+// app.get('/api/google/drive', passportConfig.isAuthenticated, passportConfig.isAuthorized, apiController.getGoogleDrive);
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
   var err = new Error('Not Found');

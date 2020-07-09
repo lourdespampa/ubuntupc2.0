@@ -19,8 +19,11 @@ img{
   margin: 20px auto;
   width: 50%;
 }
-
-.login:hover{
+.google:hover{
+  text-decoration: none;
+  color: grey;
+}
+.afb:hover, .normal:hover{
   color: white;
   text-decoration: none;
 }
