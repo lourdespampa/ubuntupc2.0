@@ -1,25 +1,26 @@
 extends layout
 block content
-	nav.navbar.navbar-light.bg-light
-		a.btn.btn-light(href='/') Home
-		form.form-inline(action='/users' method='GET')
-			input.form-control.mr-sm-2(type="text" placeholder='Buscar' name='search')
-			input.btn.btn-outline-success.my-2.my-sm-0(type="submit" value='Buscar')
-	hr
-	h1 Lista de clientes.
-	table.table
-		thead.table-warning
-			tr
-				th Id
-				th Nombre
-				th Apellido
-				th Editar
-		-for(var i = 0; i < data.length; i++){
-		tbody
-			tr
-				td #{data[i]._id} 
-				td #{data[i].nombre} 
-				td #{data[i].apellido}
-				td
-					a.btn.btn-outline-warning(href='/user/' + data[i]._id) Ver detalles
-		-}
+	.container-general
+		nav.navbar.navbar-light.bg-light
+			a.btn.btn-light(href='/home') Home
+			form.form-inline(action='/users' method='GET')
+				input.form-control.mr-sm-2(type="text" placeholder='Buscar' name='search')
+				input.btn.btn-outline-success.my-2.my-sm-0(type="submit" value='Buscar')
+		hr
+		h1 Lista de clientes.
+		table.table
+			thead.table-warning
+				tr
+					th Id
+					th Nombre
+					th Apellido
+					th Editar
+			-for(var i = 0; i < data.length; i++){
+			tbody
+				tr
+					td #{data[i]._id} 
+					td #{data[i].nombre} 
+					td #{data[i].apellido}
+					td
+						a.btn.btn-outline-warning(href='/user/' + data[i]._id) Ver detalles
+			-}

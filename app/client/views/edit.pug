@@ -1,24 +1,25 @@
 extends layout 
 block content
-	a.btn.btn-light(href='/') Home
-	hr
-	h1 Editar
-	form(action='/edit/' + data._id, method='POST')
-		.form-row
-			input(type='hidden', name='_method', value='PUT')
-			.form-group.col-md-6
-				label(for="inputname") Nombre:
-				input.form-control(type='text', name='nombre', value=data.nombre)
-			.form-group.col-md-6
-				label(for="inputapellido") Apellido:
-				input.form-control(type='text', name='apellido', value=data.apellido)
-			.form-group.col-md-6
-				label(for="inputemail") Email:
-				input.form-control(type='text', name='email', value=data.email)
-			.form-group.col-md-6
-				label(for="inputfecha_nacimiento") Fecha de Nacimiento:
-				input.form-control(type='date', name='fecha_nacimiento', value=data.fecha_nacimiento)
-			.form-group.col-md-12
-				label(for="inputimagen") Imagen:
-				input.form-control(type='text', name='imagen', value=data.imagen)
-			input.btn.btn-outline-success(type='submit', value='Guardar Cambios')
+	.container-general
+		a.btn.btn-light(href='/home') Home
+		hr
+		h1 Editar
+		form(action='/edit/' + data._id, method='POST')
+			.form-row
+				input(type='hidden', name='_method', value='PUT')
+				.form-group.col-md-6
+					label(for="inputname") Nombre:
+					input.form-control(type='text', name='nombre', value=data.nombre)
+				.form-group.col-md-6
+					label(for="inputapellido") Apellido:
+					input.form-control(type='text', name='apellido', value=data.apellido)
+				.form-group.col-md-6
+					label(for="inputemail") Email:
+					input.form-control(type='text', name='email', value=data.email)
+				.form-group.col-md-6
+					label(for="inputfecha_nacimiento") Fecha de Nacimiento:
+					input.form-control(type='date', name='fecha_nacimiento', value=data.fecha_nacimiento)
+				.form-group.col-md-12
+					label(for="inputimagen") Imagen:
+					input.form-control(type='text', name='imagen', value=data.imagen)
+				input.btn.btn-outline-success(type='submit', value='Guardar Cambios')

@@ -1,29 +1,30 @@
 extends layout
 block content
-	a.btn.btn-light(href='/') Home
-	hr
-	.form-row
-		.form-group.col-md-6
-			figure
-				img(src=data.imagen)
+	.container-general
+		a.btn.btn-light(href='/home') Home
+		hr
+		.form-row
+			.form-group.col-md-6
+				figure
+					img(src=data.imagen)
 
-		.form-group.col-md-6
-			table.table
-				.thead-light
-					tr
-						th Nombre
-						td=data.nombre
-					tr
-						th Apellido
-						td=data.apellido
-					tr
-						th Fecha de nacimiento
-						td=data.fecha_nacimiento
-					tr
-						th Url de imagen
-						td=data.imagen
-					tr
-						th 
-							a.btn.btn-outline-primary(href='/edit/' + data._id) Editar
-						th
-							a.btn.btn-outline-danger(href='/delete/' + data._id + "?_method=DELETE") Borrar
+			.form-group.col-md-6
+				table.table
+					.thead-light
+						tr
+							th Nombre
+							td=data.nombre
+						tr
+							th Apellido
+							td=data.apellido
+						tr
+							th Fecha de nacimiento
+							td=data.fecha_nacimiento
+						tr
+							th Url de imagen
+							td=data.imagen
+						tr
+							th 
+								a.btn.btn-outline-primary(href='/edit/' + data._id) Editar
+							th
+								a.btn.btn-outline-danger(href='/delete/' + data._id + "?_method=DELETE") Borrar

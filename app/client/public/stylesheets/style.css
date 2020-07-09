@@ -82,3 +82,9 @@ a .login .textfb{
   box-shadow: 5px 5px 7px black;
   border-radius: 8px;
 }
+
+.container-general{
+  background-color: white;
+  padding: 20px;
+  margin: 15px auto;
+}

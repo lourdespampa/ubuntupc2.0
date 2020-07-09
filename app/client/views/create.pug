@@ -1,23 +1,24 @@
 extends layout
 block content
-	a.btn.btn-light(href='/') Home
-	hr
-	h1=title
-	form(action='/create', method='POST')
-		.form-row
-			.form-group.col-md-6
-				label(for="inputname") Nombre:
-				input.form-control(id="inputname" type='text', name='nombre', placeholder='Nombre')
-			.form-group.col-md-6
-				label(for="inputapellido") Apellido:
-				input.form-control(id="inputapellido" type='text', name='apellido', placeholder='Apellido')
-			.form-group.col-md-6
-				label(for="inputemail") Email:	
-				input.form-control(id="inputemail" type='text', name='email', placeholder='Email')
-			.form-group.col-md-6
-				label(for="inputfecha_nacimiento") Fecha de Nacimiento:		
-				input.form-control(id="inputfecha_nacimiento" type='date', name='fecha_nacimiento', placeholder='Fecha de nacimiento')
-			.form-group.col-md-12
-				label(for="inputimagen") Imagen:			
-				input.form-control(id="inputimagen" type='text', name='imagen', placeholder='Image URL')
-			input.btn.btn-outline-success(type='submit', value='Crear Contacto')
+	.container-general
+		a.btn.btn-light(href='/home') Home
+		hr
+		h1=title
+		form(action='/create', method='POST' enctype="multipart/form-data")
+			.form-row
+				.form-group.col-md-6
+					label(for="inputname") Nombre:
+					input.form-control(id="inputname" type='text', name='nombre', placeholder='Nombre')
+				.form-group.col-md-6
+					label(for="inputapellido") Apellido:
+					input.form-control(id="inputapellido" type='text', name='apellido', placeholder='Apellido')
+				.form-group.col-md-6
+					label(for="inputemail") Email:	
+					input.form-control(id="inputemail" type='text', name='email', placeholder='Email')
+				.form-group.col-md-6
+					label(for="inputfecha_nacimiento") Fecha de Nacimiento:		
+					input.form-control(id="inputfecha_nacimiento" type='date', name='fecha_nacimiento', placeholder='Fecha de nacimiento')
+				.form-group.col-md-12
+					label(for="inputimagen") Imagen:			
+					input.form-control(id="inputimagen" type='file', name='image', placeholder='Image URL')
+				input.btn.btn-outline-success(type='submit', value='Crear Contacto')
