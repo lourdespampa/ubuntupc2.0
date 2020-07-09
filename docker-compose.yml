@@ -1,0 +1,15 @@
+version: '3'
+services:
+  mongodb:
+    image: "mongo"
+    container_name: "mongodb"
+    volumes:
+      - "/data/db"
+    ports: 
+      - "27017-27019:27017-27019"
+  web:
+    build: "./app"
+    links:
+      - mongodb
+    ports:
+      - "4200:3000"

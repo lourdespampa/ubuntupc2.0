@@ -1,0 +1,81 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: rgba(5,101,255,1);
+  background: -moz-linear-gradient(left, rgba(5,101,255,1) 21%, rgba(51,139,255,1) 52%, rgba(51,139,255,1) 59%, rgba(51,139,255,1) 93%);
+  background: -webkit-gradient(left top, right top, color-stop(21%, rgba(5,101,255,1)), color-stop(52%, rgba(51,139,255,1)), color-stop(59%, rgba(51,139,255,1)), color-stop(93%, rgba(51,139,255,1)));
+  background: -webkit-linear-gradient(left, rgba(5,101,255,1) 21%, rgba(51,139,255,1) 52%, rgba(51,139,255,1) 59%, rgba(51,139,255,1) 93%);
+  background: -o-linear-gradient(left, rgba(5,101,255,1) 21%, rgba(51,139,255,1) 52%, rgba(51,139,255,1) 59%, rgba(51,139,255,1) 93%);
+  background: -ms-linear-gradient(left, rgba(5,101,255,1) 21%, rgba(51,139,255,1) 52%, rgba(51,139,255,1) 59%, rgba(51,139,255,1) 93%);
+  background: linear-gradient(to right, rgba(5,101,255,1) 21%, rgba(51,139,255,1) 52%, rgba(51,139,255,1) 59%, rgba(51,139,255,1) 93%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0565ff', endColorstr='#338bff', GradientType=1 );
+}
+
+img{
+		width: 100%;
+}
+
+.icon-login{
+  display: block;
+  margin: 20px auto;
+  width: 50%;
+}
+
+.login:hover{
+  color: white;
+  text-decoration: none;
+}
+.login h3{
+  font-size: 20px;
+  line-height: 50px;
+}
+.login{
+  margin: 20px auto;
+  display: block;
+  width: 315px;
+  height: 50px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 7px black;
+}
+
+.afb{
+  background-color: #1976d2;
+  color: white;
+}
+
+.normal{
+  background-color: #31aa52;
+  text-align: center;
+  color: white;
+}
+
+.google{
+  color: grey
+}
+
+.login .fb{
+  width: auto;
+  height: 50px;
+  float: left;
+}
+
+.login .google{
+  width: auto;
+  height: 40px;
+  float: left;
+  margin: 5px;
+}
+a .login .textfb{
+  float: right;
+  color: white;
+  font-weight: bold;
+  margin: 20px 15px 0 0;
+}
+
+.login-container{
+  max-width: 380px;
+  padding: 20px;
+  margin: 15px auto;
+  background-color: white;
+  box-shadow: 5px 5px 7px black;
+  border-radius: 8px;
+}

@@ -1,0 +1,19 @@
+extends layout
+block content
+    .login-container
+        img.icon-login(src="./images/iniciar-sesion.svg", alt="")
+        form
+            label(for="inputemail") Email:
+            input.form-control(type='text', name='email')
+            label(for="inputemail") Contraseña:
+            input.form-control(type='text', name='contraseña')
+        p No tienes cuenta? Create una 
+            a(href="/") Aquí
+        a(href='/auth/facebook').login.normal
+            h3.textfb Iniciar sesión
+        a(href='/auth/facebook').login.afb
+            img.fb(src="./images/facebook.svg", alt="Facebook")
+            h3.textfb Iniciar sesión con Facebook
+        a(href='/auth/facebook').login.google
+            img.google(src="./images/google.svg", alt="Facebook")
+            h3.textfb Iniciar sesión con Google
